@@ -1,0 +1,9 @@
+import { Elysia } from 'elysia';
+import ejsx from 'ejsx';
+
+const app = new Elysia()
+  .get('/', async () => {
+    return await ejsx.renderFile('views/index.ejs', {
+      // data
+    });
+  });

@@ -1,0 +1,52 @@
+{
+  "name": "@symthoptic/ejsx",
+  "version": "3.2.0",
+  "description": "Enhanced EJS templating with components, layouts, and modern features",
+  "main": "lib/ejsx.js",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint lib/**/*.js",
+    "format": "prettier --write lib/**/*.js"
+  },
+  "keywords": [
+    "ejs",
+    "templates",
+    "components",
+    "layouts",
+    "templating",
+    "views",
+    "server-side-rendering",
+    "ssr"
+  ],
+  "author": "Symthoptic",
+  "license": "SOSSL",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "chokidar": "^3.5.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1"
+  },
+  "peerDependencies": {
+    "ejs": "^3.1.9"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "lib/",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/symthopticoss/ejsx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/symthopticoss/ejsx/issues"
+  },
+  "homepage": "soon"
+}

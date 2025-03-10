@@ -71,3 +71,22 @@ ejs.cache = LRU(100); // Using LRU cache
 // Disable cache in development
 ejs.cache = process.env.NODE_ENV === 'production';
 ```
+
+### API Reference
+```
+// Core rendering
+ejsx.render(template, data, options)
+ejsx.renderFile(filename, data, options)
+ejsx.renderToString(name, props)
+
+// Component management
+ejsx.registerComponent(name, config)
+ejsx.extendComponent(baseName, name, config)
+ejsx.components.get(name)
+ejsx.components.delete(name)
+
+// Layout management
+ejsx.layouts.set(name, layoutFn)
+ejsx.layouts.get(name)
+ejsx.layouts.delete(name)
+```

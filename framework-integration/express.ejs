@@ -1,0 +1,13 @@
+import express from 'express';
+import ejsx from 'ejsx';
+
+const app = express();
+
+// Setup EJSX
+app.set('view engine', 'ejs');
+app.engine('ejs', ejsx.renderFile);
+
+// Use in routes
+app.get('/', async (req, res) => {
+  res.render('index', { user: req.user });
+});

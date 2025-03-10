@@ -1,0 +1,29 @@
+<% /* Define page slots */ %>
+<% slots.title = 'Dashboard' %>
+
+<% slots.head = `
+  <style>
+    .dashboard { padding: 20px; }
+  </style>
+` %>
+
+<% slots.content = `
+  <div class="dashboard">
+    ${renderComponent('Header', { title: 'Dashboard' })}
+    
+    <div class="grid">
+      ${data.widgets.map(widget => 
+        renderComponent('Widget', {
+          title: widget.title,
+          data: widget.data
+        })
+      ).join('')}
+    </div>
+    
+    ${renderComponent('Footer', { 
+      copyright: '© 2024' 
+    })}
+  </div>
+` %>
+
+<%- renderLayout('main', slots) %>
